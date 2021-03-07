@@ -1,14 +1,12 @@
 import React from "react";
-import socketClient from "socket.io-client";
-
-const SERVER = "http://127.0.0.1:8080";
+import Chat from "./Chat/Chat";
 
 const App = () => {
-  var socket = socketClient(SERVER);
-  socket.on("connection", () => {
-    console.log("I am connected to server");
-  });
-  return <div>This is App page!</div>;
+  return (
+    <div>
+      <Chat />
+    </div>
+  );
 };
 
 export default App;
